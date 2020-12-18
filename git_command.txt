@@ -11,3 +11,4 @@ git commit -m ""
 ##push all changes to git server
 git push
 *.exe
+
