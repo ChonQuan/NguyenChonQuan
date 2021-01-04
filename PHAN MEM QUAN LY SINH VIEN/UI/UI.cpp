@@ -8,7 +8,7 @@ void UI::Display(StudentObjectData* studentobjectdata) {
     }
     cout << endl << endl;
 }
-void UI::LietKeDiemCao(int N) {
+void LietKeDiemCao(int N,MarkData& markdata) {
         vector<Mark> markdatatemp = markdata.GetDataMark();
         for (int i = 0; i<markdata.GetSize()-1;i++) {
                 for (int j = i + 1 ; j < markdata.GetSize(); j++) {
@@ -20,7 +20,7 @@ void UI::LietKeDiemCao(int N) {
                 }
         }
         if ( N > markdatatemp.size()) N = markdatatemp.size();
-        for (int i = markdatatemp.size(); i > (markdatatemp.size()-N);i--) {
+        for (int i = markdatatemp.size()-1;i>(markdatatemp.size()-1-N);i--) {
                 cout << markdatatemp[i].GetStudentNumber() << " " << markdatatemp[i].GetSubjectNumber() << " " << markdatatemp[i].GetMarkNumber() << endl;
         }
 }

@@ -27,16 +27,16 @@ void MarkData::ReadToFile(string filename) {
     int ID;
     string studentnumber;
     string subjectnumber;
-    int mark;
+    int markstudent;
     for (int i = 0; i<numberofMark; i++) {
         infile >> ID;
         infile.ignore();
         getline(infile,studentnumber);
         getline(infile,subjectnumber);
-        infile >> mark;
-        Mark Mark(studentnumber, subjectnumber, mark);
-        Mark.SetID(ID);
-        _MarkArr.push_back(Mark);
+        infile >> markstudent;
+        Mark mark(studentnumber, subjectnumber, markstudent);
+        mark.SetID(ID);
+        _MarkArr.push_back(mark);
     }
     _maxID = numberofMark;
     infile.close();
