@@ -1,0 +1,2 @@
+g++ main.cpp StudentObject/Student.cpp StudentDataAccess/StudentData.cpp StudentDataAccess/MarkData.cpp StudentObject/Mark.cpp -o main.exe
+g++ TestReadToFile.cpp ../StudentObject/Student.cpp ../StudentDataAccess/StudentData.cpp -o TestReadToFile.exe
