@@ -1,32 +1,27 @@
 #include "Subject.h"
 
 Subject::Subject() {
+
 }
-Subject::Subject(string subjectnumber, string subjectname, int tinchi) {
-    SubjectNumber = subjectnumber;
-    SubjectName = subjectname;
-    TinChi = tinchi;
-}
-int Subject::GetID() {
-    return ID;
+Subject::Subject(string SubjectNumber, string SubjectName, int CreditNumber) {
+    _SubjectNumber = SubjectNumber;
+    _SubjectName = SubjectName;
+    _CreditNumber = CreditNumber;    
 }
 string Subject::GetSubjectNumber() {
-    return SubjectNumber;
+    return _SubjectNumber;
 }
 string Subject::GetSubjectName() {
-    return SubjectName;
+    return _SubjectName;
 }
-int Subject::GetTinChi() {
-    return TinChi;
-}
-
-void Subject::SetID(int ID) {
-    this->ID = ID;
-}
-string Subject::To_String() {
+int Subject::GetCreditNumber() {
+    return _CreditNumber;
+}  
+string Subject::ToString() {
     string s;
-    s = "SubjectNumber : " + SubjectNumber + " ";
-    s = "SubjectName : " + SubjectName + " ";
-    s = "TinChi : " + to_string(TinChi);
+    s = "ID : " + to_string(ID) + "|";
+    s += "SubjectNumber : " + _SubjectNumber + "|";
+    s += "SubjectName : " + _SubjectName + "|";
+    s += "CreditNumber : " + to_string(_CreditNumber) + "";
     return s;
 }

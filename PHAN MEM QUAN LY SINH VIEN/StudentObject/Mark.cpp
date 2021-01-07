@@ -1,32 +1,27 @@
 #include "Mark.h"
 
 Mark::Mark() {
-}
 
-Mark::Mark(string studentnumber, string subjectnumber, int marknumber) {
-    StudentNumber = studentnumber;
-    SubjectNumber = subjectnumber;
-    MarkNumber = marknumber;
 }
-int Mark::GetID() {
-    return ID;
+Mark::Mark(string StudentNumber, string SubjectNumber, int Score) {
+    _StudentNumber = StudentNumber;
+    _SubjectNumber = SubjectNumber;
+    _Score = Score; 
 }
 string Mark::GetStudentNumber() {
-    return StudentNumber;
+    return _StudentNumber;
 }
 string Mark::GetSubjectNumber() {
-    return SubjectNumber;
+    return _SubjectNumber;
 }
-int Mark::GetMarkNumber() {
-    return MarkNumber;
-}
-void Mark::SetID(int ID) {
-    this->ID = ID;
-}
-string Mark::To_String() {
+int Mark::GetScore() {
+    return _Score;
+}  
+string Mark::ToString() {
     string s;
-    s = "StudentNumber : " + StudentNumber + " ";
-    s = "SubjectNumber : " + SubjectNumber + " ";
-    s = "MarkNumber : " + to_string(MarkNumber);
+    s = "ID : " + to_string(ID) + "|";
+    s += "StudentNumber : " + _SubjectNumber + "|";
+    s += "SubjectNumber : " + _SubjectNumber + "|";
+    s += "Score : " + to_string(_Score) + "";
     return s;
 }

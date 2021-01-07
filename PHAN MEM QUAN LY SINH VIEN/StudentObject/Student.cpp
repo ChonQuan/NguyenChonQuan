@@ -1,38 +1,31 @@
 #include "Student.h"
-
 Student::Student() {
+
 }
-Student::Student(string snum, string name, string birthdate, char sex) {
-    StudentNumber = snum;
-    StudentName = name;
-    BirthDate = birthdate;
-    Sex = sex;
-}
-int Student::GetID() {
-    return ID;
+Student::Student(string StudentNumber, string StudentName, string BirthDateStudent, string Sex) {
+    _StudentNumber = StudentNumber;
+    _StudentName = StudentName;
+    _BirthDateStudent = BirthDateStudent;
+    _Sex = Sex;   
 }
 string Student::GetStudentNumber() {
-    return StudentNumber;
+    return _StudentNumber;
 }
 string Student::GetStudentName() {
-    return StudentName;
+    return _StudentName;
 }
-string Student::GetBirthDate() {
-    return BirthDate;
+string Student::GetBirthDateStudent() {
+    return _BirthDateStudent;
 }
-char Student::GetSex() {
-    return Sex;
-}
-
-void Student::SetID(int ID) {
-    this->ID = ID;
-}
-string Student::To_String() {
+string Student::GetSex() {
+    return _Sex;
+}       
+string Student::ToString() {
     string s;
-    s = "StudentNumber : " + StudentNumber + " ";
-    s = "StudentName : " + StudentName + " ";
-    s = "BirthDate : " + BirthDate + " ";
-    string temp = string(1,Sex);
-    s = "Sex : " + temp;
+    s = "ID : " + to_string(ID) + "|";
+    s += "StudentNumber : " + _StudentNumber + "|";
+    s += "StudentName : " + _StudentName + "|";
+    s += "BirthDateStudent : " + _BirthDateStudent + "|";
+    s += "Sex : " + _Sex + "";
     return s;
 }

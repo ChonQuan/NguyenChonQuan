@@ -1,30 +1,24 @@
 #ifndef StudentProject_Student_H_
 #define StudentProject_Student_H_
 
-#include <iostream>
-#include <string>
-
 #include "StudentObject.h"
 
 using namespace std;
 
 class Student : public StudentObject {
     private:
-        int ID;
-        string StudentNumber;
-        string StudentName;
-        string BirthDate;
-        char Sex;
+        string _StudentNumber;
+        string _StudentName;
+        string _BirthDateStudent;
+        string _Sex;
     public:
         Student();
-        Student(string, string, string, char);
-        int GetID();
+        Student(string, string, string, string);
         string GetStudentNumber();
         string GetStudentName();
-        string GetBirthDate();
-        char GetSex();
-
-        void SetID(int );
-        string To_String();
+        string GetBirthDateStudent();
+        string GetSex();       
+        string ToString();
+        friend istream& operator >> (istream&, Student&);
 };
 #endif //StudentProject_Student_H_

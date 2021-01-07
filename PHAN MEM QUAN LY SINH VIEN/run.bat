@@ -1,0 +1,3 @@
+cls
+g++ main.cpp UI/UI.cpp UI/Input.cpp StudentObjectData/MarkData.cpp StudentObjectData/StudentData.cpp StudentObjectData/SubjectData.cpp StudentObject/Mark.cpp StudentObject/Student.cpp StudentObject/Subject.cpp StudentObject/StudentObject.cpp -o main.exe
+main

@@ -1,12 +1,12 @@
-#ifndef StudentProject_StudentObject_H_
-#define StudentProject_StudentObject_H_
+#ifndef LibraryProject_LibraryObject_H_
+#define LibraryProject_LibraryObject_H_
 
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-class StudentObject {
+class LibraryObject {
     protected:
         int ID;
     public:
@@ -14,4 +14,4 @@ class StudentObject {
         void SetID(int);
         virtual string ToString() = 0;
 };
-#endif //StudentProject_StudentObject_H_
+#endif  //LibraryProject_LibraryObject_H_

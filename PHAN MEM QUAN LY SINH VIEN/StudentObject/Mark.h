@@ -1,28 +1,22 @@
 #ifndef StudentProject_Mark_H_
 #define StudentProject_Mark_H_
 
-#include <iostream>
-#include <string>
-
 #include "StudentObject.h"
 
 using namespace std;
 
 class Mark : public StudentObject {
     private:
-        int ID;
-        string StudentNumber;
-        string SubjectNumber;
-        int MarkNumber;
+        string _StudentNumber;
+        string _SubjectNumber;
+        int _Score;
     public:
         Mark();
         Mark(string, string, int);
-        int GetID();
         string GetStudentNumber();
-        string GetSubjectNumber();
-        int GetMarkNumber();
-
-        void SetID(int );
-        string To_String();
+        string GetSubjectNumber();  
+        int GetScore();   
+        string ToString();
+        friend istream& operator >> (istream&, Mark&);
 };
 #endif //StudentProject_Mark_H_
